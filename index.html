@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Freelancer - Start Bootstrap Theme</title>
+        <meta name="description" content="Portfolio y curriculum vitae de Branco Blunda - Desarrollador Python especializado en automatización e inteligencia artificial">
+        <meta name="author" content="Branco Blunda">
+        <meta name="keywords" content="python, desarrollador, programador, automatización, inteligencia artificial, portfolio, curriculum">
+        <title>Branco Blunda - Desarrollador Python</title>
         <!-- Font Awesome icons (free version)-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -13,14 +14,62 @@
         <!-- Fonts CSS-->
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <style>
+            .whatsapp-button {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                background-color: #25d366;
+                color: white;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 1px 1px 2px #999;
+                z-index: 100;
+                opacity: 0;
+                visibility: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                transition: all 0.5s ease;
+            }
+            .whatsapp-button:hover {
+                background-color: #128C7E;
+                color: white;
+                transform: scale(1.1);
+            }
+            .whatsapp-button.visible {
+                opacity: 1;
+                visibility: visible;
+            }
+        </style>
+        <script>
+            window.addEventListener('scroll', function() {
+                const whatsappButton = document.querySelector('.whatsapp-button');
+                const headerHeight = document.querySelector('header').offsetHeight;
+                
+                if (window.scrollY > headerHeight) {
+                    whatsappButton.classList.add('visible');
+                } else {
+                    whatsappButton.classList.remove('visible');
+                }
+            });
+        </script>
     </head>
     <body id="page-top">
+        <a href="https://wa.me/543412714751" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Programador</a>
                 <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTAFOLIO</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">SOBRE MI</a>
                         </li>
@@ -32,7 +81,8 @@
         </nav>
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="assets/img/11zon_cropped.png" alt="">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/11zon_cropped.png" alt="Foto de perfil de Branco Blunda">
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading mb-0">Branco Blunda</h1>
                 <!-- Icon Divider-->
@@ -42,19 +92,19 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Desarrollador Python | Automatización e IA</p>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Desarrollador Python | Especialista en Automatización e Inteligencia Artificial</p>
             </div>
         </header>
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTAFOLIO</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Grid Items-->
@@ -110,12 +160,11 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/Imagen de WhatsApp 2025-04-01 a las 02.25.48_67bef0df.jpg" alt="Noticiero Automatizado con IA para TikTok"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Desarrollé un sistema para una cuenta de TikTok que genera videos diarios en formato TikTok con las 5 noticias mas importantes de Argentina, resumidas mediante IA. Utiliza web scraping para obtener información, síntesis automática, generación de audio y subtítulos sincronizados, además de publicación automática en TikTok.
+                                    <p class="mb-5">Desarrollé un sistema para una cuenta de TikTok que genera videos diarios en formato TikTok con las 5 noticias mas importantes de Argentina, resumidas mediante IA.<br>Utiliza web scraping para obtener información, síntesis automática, generación de audio y subtítulos sincronizados, además de publicación automática en TikTok.
+                                        <br><br>GitHub : <a href="https://github.com/brancorc/Tymonyz">https://github.com/brancorc/Tymonyz</a>
 
-GitHub : https://github.com/brancorc/Tymonyz
-
-Cuenta de TikTok (actualmente activa): https://www.tiktok.com/@argnewsia</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                        <br><br>Cuenta de TikTok (actualmente activa): <a href="https://www.tiktok.com/@argnewsia">https://www.tiktok.com/@argnewsia</a></p>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar venta</button>
                                 </div>
                             </div>
                         </div>
@@ -141,10 +190,10 @@ Cuenta de TikTok (actualmente activa): https://www.tiktok.com/@argnewsia</p>
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/Imagen de WhatsApp 2025-04-01 a las 19.02.26_6441a281.jpg" alt="Gestor de Pedidos"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Creé una aplicación de escritorio para gestionar pedidos para un comercio de cookies. Permite agregar, editar y eliminar pedidos, generar reportes de ventas y controlar el inventario en tiempo real. Utiliza una interfaz sencilla y fácil de usar con Tkinter (Python), y SQlite para la base de datos.
+                                    <p class="mb-5">Creé una aplicación de escritorio para gestionar pedidos para un comercio de cookies.<br>Permite agregar, editar y eliminar pedidos, generar reportes de ventas y controlar el inventario en tiempo real. Utiliza una interfaz sencilla y fácil de usar con Tkinter (Python), y SQlite para la base de datos.
 
-GitHub: https://github.com/brancorc/GestionCookies</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+<br><br>GitHub: <a href="https://github.com/brancorc/GestionCookies">https://github.com/brancorc/GestionCookies</a></p>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar ventana</button>
                                 </div>
                             </div>
                         </div>
@@ -170,8 +219,8 @@ GitHub: https://github.com/brancorc/GestionCookies</p>
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/Imagen de WhatsApp 2025-04-02 a las 23.47.59_530d2f9e.jpg" alt="Dashboard de Ventas en Excel"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Creación de un dashboard interactivo en Excel para visualizar métricas clave de ventas, incluyendo facturación mensual, cantidad vendida, distribución de métodos de pago y análisis por comunidad autónoma. Utilización de gráficos dinámicos, segmentación de datos y automatización con fórmulas avanzadas y Power Query.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                    <p class="mb-5">Creación de un dashboard interactivo en Excel para visualizar métricas clave de ventas, incluyendo facturación mensual, cantidad vendida, distribución de métodos de pago y análisis por comunidad autónoma.<br>Utilización de gráficos dinámicos, segmentación de datos y automatización con fórmulas avanzadas y Power Query.</p>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar ventana</button>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +247,7 @@ GitHub: https://github.com/brancorc/GestionCookies</p>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/af53ef8d-5a5f-49d3-8927-b1e0991692ec.png" alt="Dashboard de Análisis Financiero en Web"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">Desarrollo de un dashboard web interactivo para visualizar métricas financieras clave, como ingresos mensuales y anuales, progreso de tareas y solicitudes pendientes. Implementación de gráficos dinámicos para el análisis de tendencias y fuentes de ingresos, utilizando tecnologías modernas de frontend y backend.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar ventana</button>
                                 </div>
                             </div>
                         </div>
@@ -210,21 +259,164 @@ GitHub: https://github.com/brancorc/GestionCookies</p>
             <div class="container">
                 <!-- About Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">SOBRE MI</h2>
+                    <h2 class="page-section-heading d-inline-block text-white">SOBRE MÍ</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fas fa-user"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto">
-                        <p class="pre-wrap lead"> Estudiante de IA y programador experto en Python, con experiencia en automatización, web scraping y gestión de datos. Apasionado por la optimización de procesos y la IA.</p>
+                    <div class="col-lg-8 mx-auto">
+                        <p class="pre-wrap lead text-center">Soy un estudiante de IA y programador experto en Python, con experiencia en automatización, web scraping y gestión de datos. Especializado en el desarrollo de soluciones tecnológicas innovadoras y eficientes.</p>
                     </div>
-                    <div class="col-lg-4 mr-auto">
-                        <p class="pre-wrap lead">Me apasiona la optimización de procesos y la aplicación de IA para resolver problemas del mundo real. </p>
+                    <div class="col-lg-8 mx-auto">
+                        <p class="pre-wrap lead text-center">Mi objetivo es aplicar la IA y las tecnologías emergentes para crear soluciones que impacten positivamente en la sociedad. Busco constantemente nuevos desafíos y oportunidades para expandir mis conocimientos y habilidades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="skills">
+            <div class="container">
+                <!-- Skills Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">TECNOLOGÍAS</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Skills Section Content-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h4 class="text-center mb-4">
+                                    <i class="fas fa-code fa-2x mb-3 text-primary"></i><br>
+                                    Lenguajes
+                                </h4>
+                                <div class="row text-center">
+                                    <div class="col-4 col-md-2 mb-4">
+                                        <i class="fab fa-python fa-3x mb-2 text-info"></i>
+                                        <p>Python</p>
+                                    </div>
+                                    <div class="col-4 col-md-2 mb-4">
+                                        <i class="fab fa-html5 fa-3x mb-2 text-danger"></i>
+                                        <p>HTML</p>
+                                    </div>
+                                    <div class="col-4 col-md-2 mb-4">
+                                        <i class="fab fa-css3-alt fa-3x mb-2 text-primary"></i>
+                                        <p>CSS</p>
+                                    </div>
+                                    <div class="col-4 col-md-2 mb-4">
+                                        <i class="fab fa-js fa-3x mb-2 text-warning"></i>
+                                        <p>JavaScript</p>
+                                    </div>
+                                    <div class="col-4 col-md-2 mb-4">
+                                        <i class="fas fa-copyright fa-3x mb-2 text-secondary"></i>
+                                        <p>C</p>
+                                    </div>
+                                    <div class="col-4 col-md-2 mb-4">
+                                        <i class="fas fa-code fa-3x mb-2 text-success"></i>
+                                        <p>Racket</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h4 class="text-center mb-4">
+                                    <i class="fas fa-database fa-2x mb-3 text-primary"></i><br>
+                                    Bases de Datos
+                                </h4>
+                                <div class="row text-center">
+                                    <div class="col-6">
+                                        <i class="fas fa-database fa-3x mb-3 text-info"></i>
+                                        <p class="lead">SQLite</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="fas fa-leaf fa-3x mb-3 text-success"></i>
+                                        <p class="lead">MongoDB</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h4 class="text-center mb-4">
+                                    <i class="fas fa-layer-group fa-2x mb-3 text-primary"></i><br>
+                                    Frameworks/Librerías
+                                </h4>
+                                <div class="row text-center justify-content-center">
+                                    <div class="col-4 col-md-3 mb-4">
+                                        <i class="fas fa-flask fa-3x mb-3 text-success"></i>
+                                        <p>Flask</p>
+                                    </div>
+                                    <div class="col-4 col-md-3 mb-4">
+                                        <i class="fas fa-window-restore fa-3x mb-3 text-primary"></i>
+                                        <p>Tkinter</p>
+                                    </div>
+                                    <div class="col-4 col-md-3 mb-4">
+                                        <i class="fas fa-robot fa-3x mb-3 text-warning"></i>
+                                        <p>Selenium</p>
+                                    </div>
+                                    <div class="col-4 col-md-3 mb-4">
+                                        <i class="fab fa-python fa-3x mb-3 text-success"></i>
+                                        <p>Django</p>
+                                    </div>
+                                    <div class="col-4 col-md-3 mb-4">
+                                        <i class="fas fa-table fa-3x mb-3 text-info"></i>
+                                        <p>Pandas</p>
+                                    </div>
+                                    <div class="col-4 col-md-3 mb-4">
+                                        <i class="fas fa-brain fa-3x mb-3 text-danger"></i>
+                                        <p>PyTorch</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h4 class="text-center mb-4">
+                                    <i class="fas fa-spider fa-2x mb-3 text-primary"></i><br>
+                                    Automatización & Web Scraping
+                                </h4>
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <i class="fas fa-robot fa-3x mb-3 text-danger"></i>
+                                        <p>Selenium</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fas fa-exchange-alt fa-3x mb-3 text-info"></i>
+                                        <p>requests</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fas fa-spider fa-3x mb-3 text-success"></i>
+                                        <p>BeautifulSoup</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h4 class="text-center mb-4">
+                                    <i class="fas fa-chart-bar fa-2x mb-3 text-primary"></i><br>
+                                    Análisis de Datos
+                                </h4>
+                                <div class="text-center">
+                                    <i class="fas fa-file-excel fa-3x mb-3 text-success"></i>
+                                    <p class="lead">Excel avanzado con VBA</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,7 +430,7 @@ GitHub: https://github.com/brancorc/GestionCookies</p>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fas fa-phone"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Contact Section Content-->
@@ -246,8 +438,8 @@ GitHub: https://github.com/brancorc/GestionCookies</p>
                     <div class="col-lg-4">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
-                            <div class="text-muted">Phone</div>
-                            <div class="lead font-weight-bold">+ 54 341 271 4751</div>
+                            <div class="text-muted">Teléfono</div>
+                            <div class="lead font-weight-bold"><a href="tel:+543412714751">+ 54 341 271 4751</a></div><br><br>
                         </div>
                     </div>
                     <div class="col-lg-4">
